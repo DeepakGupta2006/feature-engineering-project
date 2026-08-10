@@ -1,0 +1,6 @@
+name,date_of_birth,height_cm,weight_kg,purchase_date,signup_date,age,birth_year,birth_month,birth_weekday,days_since_signup,days_signup_to_purchase,bmi,age_group,is_adult,is_recent_customer
+Alice,1990-05-15,165,60,2024-01-10,2023-01-01,36,1990,5,Tuesday,1317,374,22.04,Adult,True,False
+Bob,1985-11-02,178,82,2024-03-15,2022-06-15,40,1985,11,Saturday,1517,639,25.88,Adult,True,False
+Charlie,2000-01-30,172,75,2024-06-20,2023-11-01,26,2000,1,Sunday,1013,232,25.35,Young Adult,True,False
+Deepak,2006-10-21,160,61,2025-08-01,2024-03-10,19,2006,10,Saturday,883,509,23.83,Young Adult,True,False
+Sarthak,2004-03-10,161,92,2025-08-01,2024-03-10,22,2004,3,Wednesday,883,509,35.49,Young Adult,True,False
