@@ -53,7 +53,7 @@ feature-engineering-project/
 ├── feature_engineering.py     # Main script — loads data, creates features, saves output
 ├── engineered_features.csv    # Output file generated after running the script
 ├── README.md                  # Project documentation (this file)
-└── .gitignore                 # Files/folders excluded from Git tracking
+
 ```
 
 ---
