@@ -1,19 +1,16 @@
 """
-feature_engineering.py
-------------------------------------------------------
 A complete, runnable example of Feature Creation:
 combining/deriving new features from existing columns.
 
 Run with:  python feature_engineering.py
-------------------------------------------------------
 """
 
 import pandas as pd
 from datetime import datetime
 
-# ------------------------------------------------------
+
 # STEP 1: Load your data
-# ------------------------------------------------------
+
 # Replace this block with: df = pd.read_csv("your_file.csv")
 data = {
     'name': ['Alice', 'Bob', 'Charlie', 'Deepak'],
@@ -25,16 +22,15 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# ------------------------------------------------------
+
 # STEP 2: Convert date-like text columns to real dates
-# ------------------------------------------------------
+
 date_cols = ['date_of_birth', 'purchase_date', 'signup_date']
 for col in date_cols:
     df[col] = pd.to_datetime(df[col])
 
-# ------------------------------------------------------
 # STEP 3: Helper function for precise age calculation
-# ------------------------------------------------------
+
 def calculate_age(dob, ref_date=None):
     if ref_date is None:
         ref_date = pd.Timestamp(datetime.now().date())
@@ -43,9 +39,9 @@ def calculate_age(dob, ref_date=None):
         age -= 1
     return age
 
-# ------------------------------------------------------
+
 # STEP 4: Create derived features
-# ------------------------------------------------------
+
 today = pd.Timestamp(datetime.now().date())
 
 # Age from date of birth
@@ -70,13 +66,13 @@ df['age_group'] = pd.cut(
     labels=['Teen', 'Young Adult', 'Adult', 'Middle Age', 'Senior']
 )
 
-# Boolean flag features
+
 df['is_adult'] = df['age'] >= 18
 df['is_recent_customer'] = df['days_since_signup'] < 730
 
-# ------------------------------------------------------
+
 # STEP 5: Check for missing/invalid values before trusting results
-# ------------------------------------------------------
+
 print("Missing values per column:")
 print(df.isna().sum())
 print()
