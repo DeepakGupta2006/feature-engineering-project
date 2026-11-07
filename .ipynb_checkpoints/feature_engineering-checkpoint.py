@@ -81,14 +81,14 @@ print("Missing values per column:")
 print(df.isna().sum())
 print()
 
-# ------------------------------------------------------
+
 # STEP 6: View the result
-# ------------------------------------------------------
+
 print("Final DataFrame with engineered features:")
 print(df.to_string(index=False))
 
-# ------------------------------------------------------
+
 # STEP 7: Save the result
-# ------------------------------------------------------
+
 df.to_csv("engineered_features.csv", index=False)
 print("\nSaved output to engineered_features.csv")

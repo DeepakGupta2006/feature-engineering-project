@@ -15,6 +15,7 @@ from datetime import datetime
 # STEP 1: Load your data
 # ------------------------------------------------------
 # Replace this block with: df = pd.read_csv("your_file.csv")
+
 data = {
     'name': ['Alice', 'Bob', 'Charlie', 'Deepak','Sarthak', 'dheeraj','Akash'],
     'date_of_birth': ['1990-05-15', '1985-11-02', '2000-01-30', '2006-10-21','2004-03-10','1991-02-25','2022-03-12'],
